@@ -18,6 +18,6 @@ $
 
 ## License
 
-The MIT License
+The Apache V2.0 License
 
 2018 (C) Tiryoh

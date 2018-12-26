@@ -10,11 +10,19 @@ https://hub.docker.com/r/tiryoh/ros-kinetic-desktop/
 
 ## Usage
 
-building ROS package `<package_name>` located in `~/repo/ros_ws/`:
-```
-$ docker run --rm -it -v ~/repo/ros_ws/<package_name>:/home/ubuntu/catkin_ws/src/<package_name> tiryoh/ros-kinetic-desktop catkin_make
-$ 
-```
+* move into your ROS package, and just run:
+
+  ```
+  $ docker run --rm -it -v $(pwd):/ws tiryoh/ros-kinetic-desktop catkin_make
+  ```
+
+  * `/ws` directory is simbolic linked to `/home/ubuntu/catkin_ws/src/ws`
+
+* building ROS package `<package_name>` located in `~/workspace/ros/`:
+
+  ```
+  $ docker run --rm -it -v ~/workspace/ros/<package_name>:/home/ubuntu/catkin_ws/src/<package_name> tiryoh/ros-kinetic-desktop catkin_make
+  ```
 
 ## License
 

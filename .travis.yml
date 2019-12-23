@@ -6,5 +6,6 @@ services:
       - docker
 
 script:
-      - docker build -t tiryoh/dev .
+  - docker build -t tiryoh/ros-kinetic-desktop:latest ./base
+  - docker build -t tiryoh/ros-kinetic-desktop:dev ./devel
 
